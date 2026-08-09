@@ -31,6 +31,19 @@
       }
     }
 
+    /* IMMAGINE CREPA VETRO ROTTO */
+    .crack-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 9999; /* Posizionata sopra a tutto */
+      pointer-events: none; /* Permette di cliccare sui pulsanti sottostanti */
+      opacity: 0.85; /* Leggera trasparenza per integrarsi col display */
+    }
+
     /* BARRA DI STATO IN ALTO */
     .status-bar {
       height: 35px;
@@ -123,7 +136,7 @@
     }
     .screen.active { display: flex; }
 
-    /* SCHERMATA BLOCCO CON TUA IMMAGINE */
+    /* SCHERMATA BLOCCO */
     #lock-screen {
       background-image: url('e5c1b8600a94e601ee412d4c6426e158.jpg');
       background-size: cover;
@@ -171,7 +184,7 @@
       font-size: 22px; cursor: pointer;
     }
 
-    /* SCHERMATA HOME CON TUA IMMAGINE */
+    /* SCHERMATA HOME */
     #home-screen {
       background-image: url('e5c1b8600a94e601ee412d4c6426e158.jpg');
       background-size: cover;
@@ -250,6 +263,9 @@
 <body>
 
 <div class="phone">
+  <!-- IMMAGINE CREPA SCHERMO ROTTO -->
+  <img src="1000072525-removebg-preview.png" alt="Crepa Schermo" class="crack-overlay">
+
   <!-- Status Bar -->
   <div class="status-bar" onclick="toggleNotificationPanel()">
     <span id="statusClock">14:30</span>
@@ -562,4 +578,3 @@
 
 </body>
 </html>
-
